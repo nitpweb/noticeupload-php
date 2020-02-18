@@ -3,6 +3,7 @@
 require_once 'configannoun.php';
 require_once 'configevent.php';
 require_once 'configimportant.php';
+require_once 'configTender.php';
 
 // Remove token and user data from the session
 unset($_SESSION['token']);
