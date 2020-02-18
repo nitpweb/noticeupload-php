@@ -85,10 +85,11 @@ class Notices{
     private $dbHost     = 'localhost';
     private $dbUsername = 'root';
     private $dbPassword = '12345';
-    private $dbName     = 'googleSign';
+    private $dbName     = 'noticeuploadfeb2020';
     public static $ANNOUNCEMENT = 'announcements';
     public static $EVENT = 'events';
     public static $IMPORTANT = 'importants';
+    public static $TENDER = 'tenders';
 
 
     function __construct()

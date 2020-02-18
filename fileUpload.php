@@ -19,7 +19,7 @@
     $fileTmpName  = $_FILES['myfile']['tmp_name'];
     $fileType = $_FILES['myfile']['type'];
     $fileExtension = strtolower(end(explode('.',$fileName)));
-    $nameofPerson = $_POST['firstname'];
+    // $nameofPerson = $_POST['firstname'];
     $noticeStatement = $_POST['noticestm'];
     $openDate = $_POST['opendate'];
     $closeDate = $_POST['closedate'];
@@ -103,6 +103,7 @@
                 $AnnouncementsId = '14j_DsNSeBTLfc3N-snESgq5C5V172XCy';
                 $ImportantId = '1vgjpeLraRIjKjZR5_NQZR21s_mIicLyQ';
                 $EventId = '1-b2647RR-cKpH_VITCWvlaC_EmMtEujP';
+                $TenderId= '1-b2647RR-cKpH_VITCWvlaC_EmMtEujP';
                 // $ANNOUNCEMENT_FILE = 'csv/announcement.csv';
                 // $IMPORTANT_FILE = 'csv/important.csv';
                 // $EVENTS_FILE = 'csv/events.csv';
@@ -121,6 +122,11 @@
                     case 'Events':
                         $targetFile = Notices::$EVENT;
                         $parentId = $EventId;
+                        break;
+                    case 'Tenders':
+                        $targetFile = Notices::$TENDER;
+                        $parentId = $TenderId;
+                        break;
                 }
                 // $file->setShared(1);
                 $parent = new Google_ParentReference();
@@ -147,7 +153,7 @@
 
                 
                 unlink($file_path);
-                //header('location:' . 'notice.php');
+                header('location:' . 'Usernotice.php');
                 // $testFile = $service->files->get("1O_gIFbOhJj_PrJMU7aIdZNbeoCMGHxkJ");
                 // print_r($testFile);
             }

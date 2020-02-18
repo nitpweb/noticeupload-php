@@ -14,7 +14,7 @@
 
     $dbhelp->updateNotices($tname,$arr,$id);
 
-    echo "<a href='Usernotice.php'>Click here </a>to back to Mynotices";
-    echo "<a href='notice.php' >Click here </a> to back to notices";
+    echo "<a href='Usernotice.php'>Click here </a>to back to Mynotices<br>";
+    echo "<a href='tendersUpload.php' >Click here </a> to Upload New Tender";
 
 ?>

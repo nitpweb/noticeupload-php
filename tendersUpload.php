@@ -124,13 +124,13 @@ if ($gClient->getAccessToken()) {
 
             <body>
 
-                <h3>Upload to Announcements</h3>
+                <h3>Upload to Tenders</h3>
                 <a href="Usernotice.php"><button>My current Notices</button></a>
                 <a href="Userarchive.php"><button>My archive Notices</button></a>
                 <div>
                     <form action="fileUpload.php" method="post" enctype="multipart/form-data">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+                        <!-- <label for="name">Your Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.."><br> -->
                         <label for="NoticeStatement">NoticeStatement</label><br>
                         <textarea rows="4" cols="100%" name="noticestm">
                     </textarea><br>
@@ -157,7 +157,7 @@ if ($gClient->getAccessToken()) {
                 </div>
 
                 <script>
-                    document.getElementById('eventin').value = "Announcements";
+                    document.getElementById('eventin').value = "Tenders";
                 </script>
 
                 <?php

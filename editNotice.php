@@ -47,7 +47,7 @@
         $db = new Notices();
         $notice = $db->getNoticeById($tname, $id);
         if ($notice != null && $notice['email'] == $_SESSION['userData']['email']) {
-            print_r($notice);
+            // print_r($notice);
             $title = $notice['title'];
             $odate = $notice['opendate'];
             $cdate = $notice['closedate'];

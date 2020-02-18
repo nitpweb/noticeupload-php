@@ -22,31 +22,42 @@
     include 'User.class.php';
     $notices = new Notices();
     ?>
-    <div class="announcement">
+    <!-- <div class="announcement">
         <h1>Announcement</h1>
         <?php
-        $arr = $notices->getNoticesByEmail(Notices::$ANNOUNCEMENT, $_SESSION['userData']['email']);
-        foreach ($arr as $a) {
-            echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
-            echo "<a href='editNotice.php?id=" . $a['id'] . "&tname=announcements'>Edit</a>";
-        }
+        // $arr = $notices->getNoticesByEmail(Notices::$ANNOUNCEMENT, $_SESSION['userData']['email']);
+        // foreach ($arr as $a) {
+        //     echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
+        //     echo "<a href='editNotice.php?id=" . $a['id'] . "&tname=announcements'>Edit</a>";
+        // }
         ?>
     </div>
     <div class="important">
         <h1>Important</h1>
         <?php
-        $arr = $notices->getNoticesByEmail(Notices::$IMPORTANT, $_SESSION['userData']['email']);
-        foreach ($arr as $a) {
-            echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
-        }
+        // $arr = $notices->getNoticesByEmail(Notices::$IMPORTANT, $_SESSION['userData']['email']);
+        // foreach ($arr as $a) {
+        //     echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
+        // }
         ?>
     </div>
     <div class="event">
         <h1>Event</h1>
         <?php
-        $arr = $notices->getNoticesByEmail(Notices::$EVENT, $_SESSION['userData']['email']);
+        // $arr = $notices->getNoticesByEmail(Notices::$EVENT, $_SESSION['userData']['email']);
+        // foreach ($arr as $a) {
+        //     echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
+        // }
+        ?>
+    </div> -->
+
+    <div class="tender">
+        <h1>Tender</h1>
+        <?php
+        $arr = $notices->getNoticesByEmail(Notices::$TENDER, $_SESSION['userData']['email']);
         foreach ($arr as $a) {
             echo "<h3><a target='_blank' href='" . $a['url'] . "'>" . $a['title'] . "</a></h3>";
+            echo "<a href='editNotice.php?id=" . $a['id'] . "&tname=".Notices::$TENDER."'>Edit</a>";
         }
         ?>
     </div>
